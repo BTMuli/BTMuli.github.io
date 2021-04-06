@@ -29,7 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+    
+        <link rel="stylesheet" type="text/css" href="/js/live2d_assets/waifu.css">
+    
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -130,7 +136,7 @@
       <li>
         <a href="/bangumis">
           
-          <i class="fas fa-play" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>追番列表</span>
         </a>
@@ -257,7 +263,7 @@
 
                   <a href="/bangumis " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-play" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
 			      
 		          <span>追番列表</span>
                   </a>
@@ -503,14 +509,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    50.7k
+                    50.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    183 分
+                    184 分
                 </div>
                 
 
@@ -550,7 +556,7 @@
         (130)</a>
     <a class="bangumi-tab" id="bangumi-tab3" href="javascript:;" rel="external" target="_self" onclick="return false">
         已看
-        (180)</a>
+        (181)</a>
 </div>
 <div>
     <div id="bangumi-item1">
@@ -17503,6 +17509,48 @@ Grace=Field House是没有父母的孩子们居住的地方。虽然没有血缘
 </div>
 
         
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="/medias/loading.gif" data-original="/medias/loading.gif" data-src="https://cdn.jsdelivr.net/gh/mmdjiji/bangumis@main/Yosuga-no-Sora/cover.jpg" referrerPolicy="no-referrer" width="110"/>
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md0/">缘之空</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全12话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>不可用</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>不可用</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>不可用</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>不可用</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>不可用</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><br/>简介：远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠... </div>
+    </div>
+</div>
+
+        
         <div class="bangumi-pagination">
     <a class="bangumi-button bangumi-firstpage" href="javascript:;" target="_self" onclick="return false"> 首页</a>
     <a class="bangumi-button bangumi-previouspage" href="javascript:;" target="_self" onclick="return false">上一页</a>
@@ -18125,7 +18173,36 @@ var size=pagenums[i].parentNode.siblings().length;pagenums[i].innerText="1 / "+(
 </main>
 
 
+ <!-- waifu-tips.js 依赖 JQuery 库  头部已经引用了JQuery，此处不引入-->
 
+<!-- 实现拖动效果，需引入 JQuery UI -->
+
+<script src="/js/jquery-ui.min.js"></script>
+
+<div class="waifu">
+   <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+     </div>
+</div>
+
+<script src="/js/live2d_assets/waifu-tips.js"></script>
+<script src="/js/live2d_assets/live2d.js"></script>
+
+ <script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+
+     var waifuTips = "/js/live2d_assets/waifu-tips.json";
+    initModel(waifuTips)
+ </script> 
 
     <footer class="page-footer bg-color">
     
@@ -18435,7 +18512,23 @@ $(function () {
     <script type="text/javascript"
         color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
-
+    <link rel="stylesheet" href="/css/waifu.css"/>
+    <div class="waifu">
+        <!-- 提示框 -->
+        <div class="waifu-tips"></div>
+        <!-- 看板娘画布 -->
+        <canvas id="live2d" class="live2d"></canvas>
+        <!-- 工具栏 -->
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,

@@ -29,7 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+    
+        <link rel="stylesheet" type="text/css" href="/js/live2d_assets/waifu.css">
+    
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 
@@ -130,7 +136,7 @@
       <li>
         <a href="/bangumis">
           
-          <i class="fas fa-play" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>追番列表</span>
         </a>
@@ -257,7 +263,7 @@
 
                   <a href="/bangumis " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-play" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
 			      
 		          <span>追番列表</span>
                   </a>
@@ -516,7 +522,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    782
+                    780
                 </div>
                 
 
@@ -579,10 +585,10 @@
 <li>设置背景</li>
 </ul>
 <p>把你挑选的背景图片命名为：background.jpg，放在blog\themes\next\source\images里，在blog\themes\next\source\css_custom文件的custom.styl首部添加：</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
   <span class="token property">background</span><span class="token punctuation">:</span><span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>/images/background.jpg<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
   <span class="token property">background-attachment</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>background-attachment: fixed;是固定背景图片。</p>
 <p>这是设置一张静态图片作为背景，其实Next主题自带有动态的背景效果，修改主题配置文件中的canvas_nest: false为canvas_nest: true即可。</p>
 <ul>
@@ -1226,7 +1232,36 @@
 </main>
 
 
+ <!-- waifu-tips.js 依赖 JQuery 库  头部已经引用了JQuery，此处不引入-->
 
+<!-- 实现拖动效果，需引入 JQuery UI -->
+
+<script src="/js/jquery-ui.min.js"></script>
+
+<div class="waifu">
+   <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+     </div>
+</div>
+
+<script src="/js/live2d_assets/waifu-tips.js"></script>
+<script src="/js/live2d_assets/live2d.js"></script>
+
+ <script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+
+     var waifuTips = "/js/live2d_assets/waifu-tips.json";
+    initModel(waifuTips)
+ </script> 
 
     <footer class="page-footer bg-color">
     
@@ -1536,7 +1571,23 @@ $(function () {
     <script type="text/javascript"
         color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
-
+    <link rel="stylesheet" href="/css/waifu.css"/>
+    <div class="waifu">
+        <!-- 提示框 -->
+        <div class="waifu-tips"></div>
+        <!-- 看板娘画布 -->
+        <canvas id="live2d" class="live2d"></canvas>
+        <!-- 工具栏 -->
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
