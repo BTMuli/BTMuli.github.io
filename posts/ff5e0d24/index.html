@@ -495,7 +495,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    672
+                    670
                 </div>
                 
 
@@ -517,6 +517,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -525,10 +528,21 @@
                 <h1 id="hexo-bilibili-bangumi"><a href="#hexo-bilibili-bangumi" class="headerlink" title="hexo-bilibili-bangumi"></a>hexo-bilibili-bangumi</h1><p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/7759b2fa665f855f1b9ae916b44964b5243d004738374e8e8d9e31154afb7221/68747470733a2f2f6e6f6465692e636f2f6e706d2f6865786f2d62696c6962696c692d62616e67756d692e706e673f646f776e6c6f6164733d7472756526646f776e6c6f616452616e6b3d747275652673746172733d74727565"><img src="https://camo.githubusercontent.com/7759b2fa665f855f1b9ae916b44964b5243d004738374e8e8d9e31154afb7221/68747470733a2f2f6e6f6465692e636f2f6e706d2f6865786f2d62696c6962696c692d62616e67756d692e706e673f646f776e6c6f6164733d7472756526646f776e6c6f616452616e6b3d747275652673746172733d74727565" alt="img"></a></p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><strong>为 Hexo 添加哔哩哔哩番剧页面，参考自<a target="_blank" rel="noopener" href="https://github.com/mythsman/hexo-douban">hexo-douban</a></strong>.</p>
 <p><a target="_blank" rel="noopener" href="https://demo.hclonely.com/bangumis/">Demo</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-bilibili-bangumi --save</span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class="line-numbers language-none"><code class="language-none">$ npm install hexo-bilibili-bangumi --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>将下面的配置写入站点的配置文件 <code>_config.yml</code> 里(不是主题的配置文件).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">bangumi:</span><br><span class="line">  enable: true</span><br><span class="line">  path:</span><br><span class="line">  vmid:</span><br><span class="line">  title: &#39;追番列表&#39;</span><br><span class="line">  quote: &#39;生命不息，追番不止！&#39;</span><br><span class="line">  show: 1</span><br><span class="line">  loading:</span><br><span class="line">  metaColor:</span><br><span class="line">  color:</span><br><span class="line">  webp:</span><br><span class="line">  progress:</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">bangumi:
+  enable: true
+  path:
+  vmid:
+  title: &#39;追番列表&#39;
+  quote: &#39;生命不息，追番不止！&#39;
+  show: 1
+  loading:
+  metaColor:
+  color:
+  webp:
+  progress:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><strong>enable</strong>: 是否启用</li>
 <li><strong>path</strong>: 番剧页面路径，默认<code>bangumis/index.html</code></li>
@@ -551,7 +565,24 @@
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><a target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi/raw/master/example.png"><img src="https://github.com/HCLonely/hexo-bilibili-bangumi/raw/master/example.png" alt="示例图片"></a></p>
 <h2 id="手动添加番剧数据"><a href="#手动添加番剧数据" class="headerlink" title="手动添加番剧数据"></a>手动添加番剧数据</h2><p>因为某些番剧在哔哩哔哩上没有，但是又想在hexo中展示，怎么办呢？现在支持手动添加番剧数据了！</p>
 <p>在 <code>sources/_data/</code> 目录下新建文件，命名为 <code>extra_bangumis.json</code> ，并添加以如下内容:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;watchedExtra&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;title&quot;: &quot;缘之空&quot;, </span><br><span class="line">      &quot;type&quot;: &quot;番剧&quot;, </span><br><span class="line">      &quot;area&quot;: &quot;日本&quot;, </span><br><span class="line">      &quot;cover&quot;: &quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;mmdjiji&#x2F;bangumis@main&#x2F;Yosuga-no-Sora&#x2F;cover.jpg&quot;, </span><br><span class="line">      &quot;totalCount&quot;: &quot;全12话&quot;, </span><br><span class="line">      &quot;id&quot;: 0,</span><br><span class="line">      &quot;follow&quot;: &quot;不可用&quot;, </span><br><span class="line">      &quot;view&quot;: &quot;不可用&quot;, </span><br><span class="line">      &quot;danmaku&quot;: &quot;不可用&quot;, </span><br><span class="line">      &quot;coin&quot;: &quot;不可用&quot;, </span><br><span class="line">      &quot;score&quot;: &quot;不可用&quot;, </span><br><span class="line">      &quot;des&quot;: &quot;远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠...&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#123;
+  &quot;watchedExtra&quot;: [
+    &#123;
+      &quot;title&quot;: &quot;缘之空&quot;, 
+      &quot;type&quot;: &quot;番剧&quot;, 
+      &quot;area&quot;: &quot;日本&quot;, 
+      &quot;cover&quot;: &quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;mmdjiji&#x2F;bangumis@main&#x2F;Yosuga-no-Sora&#x2F;cover.jpg&quot;, 
+      &quot;totalCount&quot;: &quot;全12话&quot;, 
+      &quot;id&quot;: 0,
+      &quot;follow&quot;: &quot;不可用&quot;, 
+      &quot;view&quot;: &quot;不可用&quot;, 
+      &quot;danmaku&quot;: &quot;不可用&quot;, 
+      &quot;coin&quot;: &quot;不可用&quot;, 
+      &quot;score&quot;: &quot;不可用&quot;, 
+      &quot;des&quot;: &quot;远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠...&quot;
+    &#125;
+  ]
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>title</code> 是番剧的标题，<code>cover</code> 是封面图链接， <code>des</code> 是简介，上述字段均根据需要修改。</p>
 <p>另外除了 <code>watchedExtra</code> 数组，还可以在后面添加新的数组，可用数组名如下:</p>
 <table>
