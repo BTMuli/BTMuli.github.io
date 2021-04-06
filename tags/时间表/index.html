@@ -35,13 +35,14 @@
 
 
 <body>
-    <header class="navbar-fixed">
+    <!--
+<header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">BTMuli</span>
                 </a>
@@ -97,6 +98,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="" class="waves-effect waves-light">
 
       
@@ -110,7 +122,7 @@
       <li>
         <a href="/404">
           
-          <i class="fas fa-heart" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-heartbeat" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>404</span>
         </a>
@@ -152,7 +164,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">BTMuli</div>
         <div class="logo-desc">
@@ -212,6 +224,17 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="javascript:;">
 			
 				<i class="fa-fw fas fa-filter"></i>
@@ -225,7 +248,7 @@
 
                   <a href="/404 " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-heart" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-heartbeat" style="position: absolute;left:50px" ></i>
 			      
 		          <span>404</span>
                   </a>
@@ -330,7 +353,7 @@
     </nav>
 
 </header>
-
+-->
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -344,18 +367,7 @@
 
             <div class="description center-align">
                 
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['世界并不美丽，但也因此而美丽','The world is not beautiful,therefore it is.'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
+                    Personal Blog
                 
             </div>
         </div>
@@ -411,19 +423,19 @@
                 </a>
                 
                 
-                <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/" title="风物之琴: 1">
+                <a href="/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/" title="文档编辑: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="风物之琴" style="background-color: #E8F8F5;">风物之琴
+                            data-tagname="文档编辑" style="background-color: #E8F8F5;">文档编辑
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/" title="文档编辑: 1">
+                <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/" title="风物之琴: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="文档编辑" style="background-color: #FEF9E7;">文档编辑
+                            data-tagname="风物之琴" style="background-color: #FEF9E7;">风物之琴
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -444,7 +456,7 @@
                     <a href="/posts/bf88a430/">
                         <div class="card-image tag-image">
                             
-                            <img src="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
+                            <img src="/medias/loading.gif" data-original="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
                             
                             <span class="card-title">Timeline</span>
                         </div>
@@ -566,8 +578,8 @@
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2021";
-                    var startMonth = "4";
-                    var startDate = "1";
+                    var startMonth = "3";
+                    var startDate = "27";
                     var startHour = "0";
                     var startMinute = "0";
                     var startSecond = "0";
@@ -785,6 +797,12 @@ $(function () {
         color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
