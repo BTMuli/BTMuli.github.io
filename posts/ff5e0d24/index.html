@@ -530,7 +530,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    956
                 </div>
                 
 
@@ -567,11 +567,23 @@
 <p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/7759b2fa665f855f1b9ae916b44964b5243d004738374e8e8d9e31154afb7221/68747470733a2f2f6e6f6465692e636f2f6e706d2f6865786f2d62696c6962696c692d62616e67756d692e706e673f646f776e6c6f6164733d7472756526646f776e6c6f616452616e6b3d747275652673746172733d74727565"><img src="https://camo.githubusercontent.com/7759b2fa665f855f1b9ae916b44964b5243d004738374e8e8d9e31154afb7221/68747470733a2f2f6e6f6465692e636f2f6e706d2f6865786f2d62696c6962696c692d62616e67756d692e706e673f646f776e6c6f6164733d7472756526646f776e6c6f616452616e6b3d747275652673746172733d74727565" alt="img"></a></p>
 <h3>安装</h3>
 
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-bilibili-bangumi --save</span><br></pre></td></tr></tbody></table></figure>
-<h3>配置</h3>
+<pre><code>$ npm install hexo-bilibili-bangumi --save
+</code></pre><h3>配置</h3>
 
 <p>将下面的配置写入<strong>站点的配置文件</strong> <code>_config.yml</code> 里。</p>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">bangumi:</span><br><span class="line">  enable: true # 是否启用</span><br><span class="line">  path: # 番剧页面路径，默认 bangumis/index.html</span><br><span class="line">  vmid:	# 哔哩哔哩番剧页面的 vmid(uid)</span><br><span class="line">  title: '追番列表' # 该页面的标题</span><br><span class="line">  quote: '生命不息，追番不止！' #写在页面开头的一段话，支持 html 语法，可留空</span><br><span class="line">  show: 1 # 初始显示页面：0: 想看, 1: 在看, 2: 看过，默认为1</span><br><span class="line">  loading: #  图片加载完成前的 loading 图片</span><br><span class="line">  metaColor: #  meta 部分(简介上方)字体颜色</span><br><span class="line">  color: # 简介字体颜色</span><br><span class="line">  webp: # 番剧封面使用 webp 格式(此格式在 safari 浏览器下不显示，但是图片大小可以缩小 100 倍左右), 默认 true</span><br><span class="line">  progress: # 获取番剧数据时是否显示进度条，默认 true</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript">bangumi<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span> # 是否启用
+  path<span class="token punctuation">:</span> # 番剧页面路径，默认 bangumis<span class="token operator">/</span>index<span class="token punctuation">.</span>html
+  vmid<span class="token punctuation">:</span>    # 哔哩哔哩番剧页面的 <span class="token function">vmid</span><span class="token punctuation">(</span>uid<span class="token punctuation">)</span>
+  title<span class="token punctuation">:</span> <span class="token string">'追番列表'</span> # 该页面的标题
+  quote<span class="token punctuation">:</span> <span class="token string">'生命不息，追番不止！'</span> #写在页面开头的一段话，支持 html 语法，可留空
+  show<span class="token punctuation">:</span> <span class="token number">1</span> # 初始显示页面：<span class="token number">0</span><span class="token punctuation">:</span> 想看<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">:</span> 在看<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span> 看过，默认为<span class="token number">1</span>
+  loading<span class="token punctuation">:</span> #  图片加载完成前的 loading 图片
+  metaColor<span class="token punctuation">:</span> #  meta <span class="token function">部分</span><span class="token punctuation">(</span>简介上方<span class="token punctuation">)</span>字体颜色
+  color<span class="token punctuation">:</span> # 简介字体颜色
+  webp<span class="token punctuation">:</span> # 番剧封面使用 webp <span class="token function">格式</span><span class="token punctuation">(</span>此格式在 safari 浏览器下不显示，但是图片大小可以缩小 <span class="token number">100</span> 倍左右<span class="token punctuation">)</span><span class="token punctuation">,</span> 默认 <span class="token boolean">true</span>
+  progress<span class="token punctuation">:</span> # 获取番剧数据时是否显示进度条，默认 <span class="token boolean">true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3>使用</h3>
 
 <ol>
@@ -588,8 +600,25 @@
 
 <p>因为某些番剧在哔哩哔哩上没有，但是又想在 hexo 中展示，怎么办呢？现在支持手动添加番剧数据了！</p>
 <p>在 <code>sources/_data/</code> 目录下新建文件，命名为 <code>extra_bangumis.json</code> ，并添加以如下内容:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "watchedExtra": [</span><br><span class="line">    {</span><br><span class="line">      "title": "缘之空", </span><br><span class="line">      "type": "番剧", </span><br><span class="line">      "area": "日本", </span><br><span class="line">      "cover": "https://cdn.jsdelivr.net/gh/mmdjiji/bangumis@main/Yosuga-no-Sora/cover.jpg", </span><br><span class="line">      "totalCount": "全12话", </span><br><span class="line">      "id": 0,</span><br><span class="line">      "follow": "不可用", </span><br><span class="line">      "view": "不可用", </span><br><span class="line">      "danmaku": "不可用", </span><br><span class="line">      "coin": "不可用", </span><br><span class="line">      "score": "不可用", </span><br><span class="line">      "des": "远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠..."</span><br><span class="line">    }</span><br><span class="line">  ]</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><code>title</code> 是番剧的标题，<code>cover</code> 是封面图链接， <code>des</code> 是简介，上述字段均根据需要修改。</p>
+<pre><code>{
+  "watchedExtra": [
+    {
+      "title": "缘之空", 
+      "type": "番剧", 
+      "area": "日本", 
+      "cover": "https://cdn.jsdelivr.net/gh/mmdjiji/bangumis@main/Yosuga-no-Sora/cover.jpg", 
+      "totalCount": "全12话", 
+      "id": 0,
+      "follow": "不可用", 
+      "view": "不可用", 
+      "danmaku": "不可用", 
+      "coin": "不可用", 
+      "score": "不可用", 
+      "des": "远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠..."
+    }
+  ]
+}
+</code></pre><p><code>title</code> 是番剧的标题，<code>cover</code> 是封面图链接， <code>des</code> 是简介，上述字段均根据需要修改。</p>
 <p>另外除了 <code>watchedExtra</code> 数组，还可以在后面添加新的数组，可用数组名如下:</p>
 <table>
 <thead>
@@ -622,7 +651,48 @@
 <h3> ejs 文件的创建</h3>
 
 <p>在<code>/themes/hexo-theme-matery/layout</code>文件夹下面创建一个名为 <code>bangumi.ejs</code> 的文件，并将下面的内容复制进去：</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(<span class="string">'_partial/post-cover'</span>) %&gt; </span><br><span class="line">&lt;style&gt; </span><br><span class="line">    .hexo-douban-picture img { </span><br><span class="line">        width: <span class="number">100</span>%; </span><br><span class="line">    } </span><br><span class="line">&lt;/style&gt; </span><br><span class="line">&lt;main <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt; </span><br><span class="line">    &lt;div id=<span class="string">"contact"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"container chip-container"</span>&gt; </span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"card"</span>&gt; </span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"card-content"</span> style=<span class="string">"padding: 30px"</span>&gt; </span><br><span class="line">                &lt;h1 style=<span class="string">"margin: 10px 0 10px 0px;"</span>&gt;&lt;%= page.title %&gt;&lt;/h1&gt; </span><br><span class="line">                &lt;%- page.content %&gt; </span><br><span class="line">            &lt;/div&gt; </span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"card"</span>&gt; </span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"card-content"</span> style=<span class="string">"text-align: center"</span>&gt; </span><br><span class="line">                &lt;h3 style=<span class="string">"margin: 5px 0 5px 5px;"</span>&gt;如果你有好的内容推荐，欢迎在下面留言！&lt;/h3&gt; </span><br><span class="line">            &lt;/div&gt; </span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"card"</span>&gt; </span><br><span class="line">            &lt;% <span class="keyword">if</span> (theme.gitalk &amp;&amp; theme.gitalk.enable) { %&gt; </span><br><span class="line">                &lt;%- partial(<span class="string">'_partial/gitalk'</span>) %&gt; </span><br><span class="line">            &lt;% } %&gt; </span><br><span class="line">            &lt;% <span class="keyword">if</span> (theme.gitment.enable) { %&gt; </span><br><span class="line">                &lt;%- partial(<span class="string">'_partial/gitment'</span>) %&gt; </span><br><span class="line">            &lt;% } %&gt; </span><br><span class="line">            &lt;% <span class="keyword">if</span> (theme.disqus.enable) { %&gt; </span><br><span class="line">                &lt;%- partial(<span class="string">'_partial/disqus'</span>) %&gt; </span><br><span class="line">            &lt;% } %&gt; </span><br><span class="line">            &lt;% <span class="keyword">if</span> (theme.livere &amp;&amp; theme.livere.enable) { %&gt; </span><br><span class="line">                &lt;%- partial(<span class="string">'_partial/livere'</span>) %&gt; </span><br><span class="line">            &lt;% } %&gt; </span><br><span class="line">            &lt;% <span class="keyword">if</span> (theme.valine &amp;&amp; theme.valine.enable) { %&gt; </span><br><span class="line">                &lt;%- partial(<span class="string">'_partial/valine'</span>) %&gt; </span><br><span class="line">            &lt;% } %&gt; </span><br><span class="line">            &lt;% <span class="keyword">if</span> (theme.minivaline &amp;&amp; theme.minivaline.enable) { %&gt; </span><br><span class="line">                &lt;%- partial(<span class="string">'_partial/minivaline'</span>) %&gt; </span><br><span class="line">            &lt;% } %&gt;     </span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">&lt;/main&gt;</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/post-cover'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+<span class="token operator">&lt;</span>style<span class="token operator">></span> 
+    <span class="token punctuation">.</span>hexo<span class="token operator">-</span>douban<span class="token operator">-</span>picture img <span class="token punctuation">{</span> 
+        width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span> 
+<span class="token operator">&lt;</span>main <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">></span> 
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"contact"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container chip-container"</span><span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"padding: 30px"</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span>h1 style<span class="token operator">=</span><span class="token string">"margin: 10px 0 10px 0px;"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>title <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> page<span class="token punctuation">.</span>content <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"text-align: center"</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span>h3 style<span class="token operator">=</span><span class="token string">"margin: 5px 0 5px 5px;"</span><span class="token operator">></span>如果你有好的内容推荐，欢迎在下面留言！<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitalk <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>gitalk<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitalk'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitment<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitment'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>disqus<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/disqus'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>livere <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>livere<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/livere'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>valine <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>valine<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/valine'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>minivaline <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>minivaline<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/minivaline'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>     
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>最后面的四个模块，可以根据实际运用模块进行直接删改</p>
 </blockquote>
@@ -632,7 +702,8 @@
 <p>下面两个 js 文件中的代码进行对应修改：</p>
 <p><code>hexo-bilibili-bangumi\lib\bangumi-generator.js</code></p>
 <p><code>hexo-bilibili-bangumi\src\lib\bangumi-generator.js</code></p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layout: [<span class="string">'page'</span>, <span class="string">'bangumi'</span>]</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript">layout<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'page'</span><span class="token punctuation">,</span> <span class="token string">'bangumi'</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>本来的代码是 layout: [‘page’, ‘post’]</p>
 </blockquote>
@@ -1255,7 +1326,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5k</span>&nbsp;字
+                class="white-color">4.9k</span>&nbsp;字
             
             
             
