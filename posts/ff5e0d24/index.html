@@ -530,7 +530,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    956
                 </div>
                 
 
@@ -601,9 +601,9 @@
 
 <p>因为某些番剧在哔哩哔哩上没有，但是又想在 hexo 中展示，怎么办呢？现在支持手动添加番剧数据了！</p>
 <p>在 <code>sources/_data/</code> 目录下新建文件，命名为 <code>extra_bangumis.json</code> ，并添加以如下内容:</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
   <span class="token string">"watchedExtra"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token punctuation">{</span>
       <span class="token string">"title"</span><span class="token punctuation">:</span> <span class="token string">"缘之空"</span><span class="token punctuation">,</span> 
       <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"番剧"</span><span class="token punctuation">,</span> 
       <span class="token string">"area"</span><span class="token punctuation">:</span> <span class="token string">"日本"</span><span class="token punctuation">,</span> 
@@ -616,9 +616,9 @@
       <span class="token string">"coin"</span><span class="token punctuation">:</span> <span class="token string">"不可用"</span><span class="token punctuation">,</span> 
       <span class="token string">"score"</span><span class="token punctuation">:</span> <span class="token string">"不可用"</span><span class="token punctuation">,</span> 
       <span class="token string">"des"</span><span class="token punctuation">:</span> <span class="token string">"远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠..."</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
   <span class="token punctuation">]</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>title</code> 是番剧的标题，<code>cover</code> 是封面图链接， <code>des</code> 是简介，上述字段均根据需要修改。</p>
 <p>另外除了 <code>watchedExtra</code> 数组，还可以在后面添加新的数组，可用数组名如下:</p>
@@ -653,47 +653,47 @@
 <h3> ejs 文件的创建</h3>
 
 <p>在<code>/themes/hexo-theme-matery/layout</code>文件夹下面创建一个名为 <code>bangumi.ejs</code> 的文件，并将下面的内容复制进去：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/post-cover'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span> 
-    <span class="token punctuation">.</span>hexo<span class="token operator">-</span>douban<span class="token operator">-</span>picture img <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> 
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/post-cover'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+<span class="token operator">&lt;</span>style<span class="token operator">></span> 
+    <span class="token punctuation">.</span>hexo<span class="token operator">-</span>douban<span class="token operator">-</span>picture img <span class="token punctuation">{</span> 
         width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> 
-<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span> 
-<span class="token operator">&lt;</span>main <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">&gt;</span> 
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"contact"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container chip-container"</span><span class="token operator">&gt;</span> 
-        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"padding: 30px"</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span>h1 style<span class="token operator">=</span><span class="token string">"margin: 10px 0 10px 0px;"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>title <span class="token operator">%</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> page<span class="token punctuation">.</span>content <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
-        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
-        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"text-align: center"</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span>h3 style<span class="token operator">=</span><span class="token string">"margin: 5px 0 5px 5px;"</span><span class="token operator">&gt;</span>如果你有好的内容推荐，欢迎在下面留言！<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
-        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
-        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitalk <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>gitalk<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitalk'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitment<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitment'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>disqus<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/disqus'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>livere <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>livere<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/livere'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>valine <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>valine<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/valine'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>minivaline <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>minivaline<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/minivaline'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
-            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">&gt;</span>     
-        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
-<span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">&gt;</span>
+    <span class="token punctuation">}</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span> 
+<span class="token operator">&lt;</span>main <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">></span> 
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"contact"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container chip-container"</span><span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"padding: 30px"</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span>h1 style<span class="token operator">=</span><span class="token string">"margin: 10px 0 10px 0px;"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>title <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> page<span class="token punctuation">.</span>content <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"text-align: center"</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span>h3 style<span class="token operator">=</span><span class="token string">"margin: 5px 0 5px 5px;"</span><span class="token operator">></span>如果你有好的内容推荐，欢迎在下面留言！<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitalk <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>gitalk<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitalk'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitment<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitment'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>disqus<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/disqus'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>livere <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>livere<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/livere'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>valine <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>valine<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/valine'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>minivaline <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>minivaline<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/minivaline'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>     
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>最后面的四个模块，可以根据实际运用模块进行直接删改</p>
@@ -1052,18 +1052,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/21b8f4af/">
+                <a href="/posts/4510c7e2/">
                     <div class="card-image">
                         
-                        <img src="/medias/BOUQUET/3-2.png" class="responsive-img" alt="live2d 插件说明">
+                        <img src="/medias/BOUQUET/2-2.png" class="responsive-img" alt="风物之琴">
                         
-                        <span class="card-title">live2d 插件说明</span>
+                        <span class="card-title">风物之琴</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为 blog 添加 live2d 模型
+                            原神-风物之琴相关
                         
                     </div>
                     <div class="publish-info">
@@ -1074,8 +1074,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                            <a href="/categories/Genshin-Impact/" class="post-category">
+                                    Genshin Impact
                                 </a>
                             
                             
@@ -1085,12 +1085,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/blog-%E6%8F%92%E4%BB%B6/">
-                        <span class="chip bg-color">blog 插件</span>
-                    </a>
-                    
-                    <a href="/tags/live2d/">
-                        <span class="chip bg-color">live2d</span>
+                    <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/">
+                        <span class="chip bg-color">风物之琴</span>
                     </a>
                     
                 </div>
@@ -1328,7 +1324,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.3k</span>&nbsp;字
+                class="white-color">4.9k</span>&nbsp;字
             
             
             
