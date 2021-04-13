@@ -45,7 +45,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">BTMuli</span>
                 </a>
@@ -134,7 +134,7 @@
       <li>
         <a href="/bangumis">
           
-          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>追番列表</span>
         </a>
@@ -167,7 +167,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">BTMuli</div>
         <div class="logo-desc">
@@ -261,7 +261,7 @@
 
                   <a href="/bangumis " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
 			      
 		          <span>追番列表</span>
                   </a>
@@ -513,7 +513,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-04-13
                 </div>
                 
 
@@ -759,6 +759,132 @@ tags:
                 </div>
             </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
         </div>
     </div>
 
@@ -799,13 +925,13 @@ tags:
         appId: 'jFsEj9SeC0YQiyxudd3GMstb-gzGzoHsz',
         appKey: 'WYLWMKjMvaX9piPVvEcAfn49',
         mode: 'xCss',
-        placeholder: 'Write a Comment',
+        placeholder: '这里空荡荡的一片，似乎在等着某人写些什么...',
         pathname: window.location.pathname,
         lang: '',
         adminEmailMd5: 'd3aed20eb1c26f6647c7b9403b8df508',
-        tagMeta: ["管理员", "小伙伴", "访客"],
-        master: ["d3aed20eb1c26f6647c7b9403b8df508"],
-        friends: ["18350c40e51749be69ee78b20def2979"],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        master: ["18350c40e51749be69ee78b20def2979"],
+        friends: [""],
         math: true,
         md: true,
         enableQQ: true,
@@ -834,7 +960,7 @@ tags:
                 <a href="/posts/d016527d/">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/BOUQUET/1-2.png" class="responsive-img" alt="blog配置介绍">
+                        <img src="/medias/BOUQUET/1-2.png" class="responsive-img" alt="blog配置介绍">
                         
                         <span class="card-title">blog配置介绍</span>
                     </div>
@@ -882,7 +1008,7 @@ tags:
                 <a href="/posts/bf88a430/">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
+                        <img src="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
                         
                         <span class="card-title">Timeline</span>
                     </div>
@@ -1144,7 +1270,7 @@ tags:
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.6k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             
