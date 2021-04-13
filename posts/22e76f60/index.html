@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="风物之琴, BTMuli">
+    <meta name="keywords" content="文章配置介绍, BTMuli">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>风物之琴 | BTMuli</title>
+    <title>文章配置介绍 | BTMuli</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/libs/awesome/css/all.css">
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/BOUQUET/2-2.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/BOUQUET/2-1.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">风物之琴</h1>
+                    <h1 class="description center-align post-title">文章配置介绍</h1>
                 </div>
             </div>
         </div>
@@ -481,8 +481,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/">
-                                <span class="chip bg-color">风物之琴</span>
+                            <a href="/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/">
+                                <span class="chip bg-color">文档编辑</span>
                             </a>
                         
                     </div>
@@ -493,8 +493,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Genshin-Impact/" class="post-category">
-                                Genshin Impact
+                            <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
+                                帮助文档
                             </a>
                         
                     </div>
@@ -506,28 +506,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-05
+                    2021-04-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    649
+                    898
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -550,69 +550,129 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>风物之琴-自由演奏</h1>
-
-<h2>2021/4/5</h2>
-
-<h3>重云-いつも何度でも</h3>
-
-<blockquote>
-<p>这次带来的是重云演奏的《千与千寻》主题曲&lt;いつも何度でも&gt;<br>尝试性的加了两层滤镜，和一个动画，一个字幕<br>作为宫崎骏经典电影，千与千寻构成了很多人的童年记忆，<br>而其主题曲，いつも何度でも，更是典中典。<br>希望诸位能够静下心来，好好享受此刻的静谧。</p>
+                <blockquote>
+<p>本文章全文转自<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">主题说明文档</a></p>
 </blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=844992843&amp;bvid=BV1p54y1b7xm&amp;cid=319848829&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<h3>相关配置及其说明</h3>
 
-<h2>2021/4/2</h2>
-
-<h3>荧-世末歌者</h3>
-
+<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td><code>Markdown</code> 的文件标题</td>
+<td>文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件创建时的日期时间</td>
+<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td>author</td>
+<td>根 <code>_config.yml</code> 中的 <code>author</code></td>
+<td>文章作者</td>
+</tr>
+<tr>
+<td>img</td>
+<td><code>featureImages</code> 中的某个值</td>
+<td>文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
+</tr>
+<tr>
+<td>top</td>
+<td><code>true</code></td>
+<td>推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td>cover</td>
+<td><code>false</code></td>
+<td><code>v1.0.2</code>版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td>coverImg</td>
+<td>无</td>
+<td><code>v1.0.2</code>版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>password</td>
+<td>无</td>
+<td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 <code>password</code> 的值，该值必须是用 <code>SHA256</code> 加密后的密码，防止被他人识破。前提是在主题的 <code>config.yml</code> 中激活了 <code>verifyPassword</code> 选项</td>
+</tr>
+<tr>
+<td>toc</td>
+<td><code>true</code></td>
+<td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 <code>config.yml</code> 中激活了 <code>toc</code> 选项</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td><code>false</code></td>
+<td>是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>无</td>
+<td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>无</td>
+<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>无</td>
+<td>文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>文章标题</td>
+<td>文章关键字，SEO 时需要</td>
+</tr>
+<tr>
+<td>reprintPolicy</td>
+<td>cc_by</td>
+<td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>这次带来的是由荧演奏的&lt;世末歌者&gt;<br>处于雷鸣闪电中的风龙废墟，站在当初哥哥空伫立的地方，弹着&lt;世末歌者&gt;<br>就感觉很应景啊是不是╮(╯▽╰)╭<br>感觉弹奏有点快了，不过根据时长来看也差不多？<br>之后的曲目还在思考中，有什么建议可以在评论区留言……</p>
+<p><strong>注意</strong>:</p>
+<ol>
+<li>如果 <code>img</code> 属性不填写的话，文章特色图会根据文章标题的 <code>hashcode</code> 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章的特色图<strong>各有特色</strong>。</li>
+<li><code>date</code> 的值尽量保证每篇文章是唯一的，因为本主题中 <code>Gitalk</code> 和 <code>Gitment</code> 识别 <code>id</code> 是通过 <code>date</code> 的值来作为唯一标识的。</li>
+<li>如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 <code>_config.yml</code> 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：<a target="_blank" rel="noopener" href="http://tool.oschina.net/encrypt?type=2">开源中国在线工具</a>、<a target="_blank" rel="noopener" href="http://encode.chahuo.com/">chahuo</a>、<a target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/hash.aspx">站长工具</a>。</li>
+<li>您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</li>
+</ol>
 </blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=802465105&amp;bvid=BV18y4y1x7k9&amp;cid=318735072&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2>2021/4/1</h2>
-
-<h3>砂糖-青花瓷</h3>
-
-<blockquote>
-<p>这次带来的是由砂糖演奏的&lt;青花瓷&gt; 周总的经典曲目，<br>弹起来尽管有些磕磕碰碰，整体节奏感还是出来了， 跟之前的几首相比流畅很多，<br>下一首就是&lt;世末歌者&gt;了，这个我还得多练几遍，谱有点复杂┭┮﹏┭┮</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=587435750&amp;bvid=BV1fB4y1P74N&amp;cid=318377680&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2>2021/3/30</h2>
-
-<h3>行秋-烟雨行舟</h3> 
-
-<blockquote>
-<p>这次带来的是行秋演奏的&lt;烟雨行舟&gt;，<br>这首歌好弹一点，不过还是感觉没把原曲的精髓演奏出来，<br>今天试弹了一下&lt;世末歌者&gt;，三段的歌词，原曲4min半，我弹了7min， 有空上传，<br>下一首还是挑首简单的好了，青花瓷就不错 感谢聆听orz</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=247287776&amp;bvid=BV13v41187ac&amp;cid=317276615&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2>2021/3/29</h2>
-
-<h3>迪奥娜-团子大家族</h3>
-
-<blockquote>
-<p>这次带来的是由迪奥娜演奏的&lt;团子大家族&gt;<br>作为Clannad的经典曲目，弹起来真的令人很有感觉！<br>之前上传的勾指起誓感觉弹得不是很好，过几天会重新弹一遍顺带上传。</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=629800784&amp;bvid=BV16b4y1Q7tc&amp;cid=317003218&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h3>甘雨-天空之城</h3>
-
-<blockquote>
-<p>这次带来的是甘雨演奏的&lt;天空之城&gt;<br>经典曲目啊，节奏很慢，也挺难把控的， 简谱看起来比其他的简单很多，上手才发现没一个简单的（手残党毕竟是）<br>下一首是我个人的安利曲目，敬请期待（话说真的有人期待吗？）</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=972262575&amp;bvid=BV1Vp4y1a7i4&amp;cid=316993638&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2>2021/3/28</h2>
-
-<h3>胡桃-勾指起誓</h3>
-
-<blockquote>
-<p>看着简谱打了一会，节奏有点难压，<br>本来打算第一首上传个小星星的，又觉得太简单了（笑）<br>后面有空看看再弹几首喜欢的</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=374805596&amp;bvid=BV1VZ4y1A7ce&amp;cid=316314849&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+<p>以下为文章的 <code>Front-matter</code> 示例。</p>
+<h3 id="最简示例"><a href="#最简示例" class="headerlink" title="最简示例"></a>最简示例</h3><pre class="line-numbers language-none"><code class="language-none">---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="最全示例"><a href="#最全示例" class="headerlink" title="最全示例"></a>最全示例</h3><pre class="line-numbers language-none"><code class="language-none">---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg
+top: true
+cover: true
+coverImg: /images/1.jpg
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false
+mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+  - Typora
+  - Markdown
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -638,7 +698,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://BTMUli.github.io/posts/4510c7e2/">https://BTMUli.github.io/posts/4510c7e2/</a>
+                    <a href="https://BTMUli.github.io/posts/22e76f60/">https://BTMUli.github.io/posts/22e76f60/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -676,8 +736,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/">
-                                    <span class="chip bg-color">风物之琴</span>
+                                <a href="/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/">
+                                    <span class="chip bg-color">文档编辑</span>
                                 </a>
                             
                         </div>
@@ -897,58 +957,6 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ff5e0d24/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/BOUQUET/3-1.png" class="responsive-img" alt="Bangumi 插件使用说明">
-                        
-                        <span class="card-title">Bangumi 插件使用说明</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            为 Hexo 添加哔哩哔哩番剧页面
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/blog%E6%8F%92%E4%BB%B6/">
-                        <span class="chip bg-color">blog插件</span>
-                    </a>
-                    
-                    <a href="/tags/Matery/">
-                        <span class="chip bg-color">Matery</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/posts/d016527d/">
                     <div class="card-image">
                         
@@ -964,9 +972,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -988,6 +996,54 @@
                     
                     <a href="/tags/blog-%E7%BC%96%E8%BE%91/">
                         <span class="chip bg-color">blog 编辑</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/bf88a430/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
+                        
+                        <span class="card-title">Timeline</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这个网站的时间表
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
+                                    帮助文档
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%97%B6%E9%97%B4%E8%A1%A8/">
+                        <span class="chip bg-color">时间表</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="风物之琴, BTMuli">
+    <meta name="keywords" content="Bangumi 插件使用说明, BTMuli">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>风物之琴 | BTMuli</title>
+    <title>Bangumi 插件使用说明 | BTMuli</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/libs/awesome/css/all.css">
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/BOUQUET/2-2.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/BOUQUET/3-1.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">风物之琴</h1>
+                    <h1 class="description center-align post-title">Bangumi 插件使用说明</h1>
                 </div>
             </div>
         </div>
@@ -481,8 +481,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/">
-                                <span class="chip bg-color">风物之琴</span>
+                            <a href="/tags/blog%E6%8F%92%E4%BB%B6/">
+                                <span class="chip bg-color">blog插件</span>
+                            </a>
+                        
+                            <a href="/tags/Matery/">
+                                <span class="chip bg-color">Matery</span>
                             </a>
                         
                     </div>
@@ -493,8 +497,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Genshin-Impact/" class="post-category">
-                                Genshin Impact
+                            <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
+                                帮助文档
                             </a>
                         
                     </div>
@@ -513,21 +517,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    649
+                    997
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -550,68 +554,153 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>风物之琴-自由演奏</h1>
+                <h1>Bangumi 插件使用说明</h1>
 
-<h2>2021/4/5</h2>
-
-<h3>重云-いつも何度でも</h3>
+<h2>根据官方文档安装插件</h2>
 
 <blockquote>
-<p>这次带来的是重云演奏的《千与千寻》主题曲&lt;いつも何度でも&gt;<br>尝试性的加了两层滤镜，和一个动画，一个字幕<br>作为宫崎骏经典电影，千与千寻构成了很多人的童年记忆，<br>而其主题曲，いつも何度でも，更是典中典。<br>希望诸位能够静下心来，好好享受此刻的静谧。</p>
+<p>参考<a target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi">插件说明文档</a></p>
 </blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=844992843&amp;bvid=BV1p54y1b7xm&amp;cid=319848829&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/7759b2fa665f855f1b9ae916b44964b5243d004738374e8e8d9e31154afb7221/68747470733a2f2f6e6f6465692e636f2f6e706d2f6865786f2d62696c6962696c692d62616e67756d692e706e673f646f776e6c6f6164733d7472756526646f776e6c6f616452616e6b3d747275652673746172733d74727565"><img src="https://camo.githubusercontent.com/7759b2fa665f855f1b9ae916b44964b5243d004738374e8e8d9e31154afb7221/68747470733a2f2f6e6f6465692e636f2f6e706d2f6865786f2d62696c6962696c692d62616e67756d692e706e673f646f776e6c6f6164733d7472756526646f776e6c6f616452616e6b3d747275652673746172733d74727565" alt="img"></a></p>
+<h3>安装</h3>
 
-<h2>2021/4/2</h2>
+<pre class="line-numbers language-none"><code class="language-none">$ npm install hexo-bilibili-bangumi --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3>配置</h3>
 
-<h3>荧-世末歌者</h3>
+<p>将下面的配置写入<strong>站点的配置文件</strong> <code>_config.yml</code> 里。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">bangumi<span class="token operator">:</span>
+  enable<span class="token operator">:</span> <span class="token boolean">true</span> # 是否启用
+  path<span class="token operator">:</span> # 番剧页面路径，默认 bangumis<span class="token operator">/</span>index<span class="token punctuation">.</span>html
+  vmid<span class="token operator">:</span>	# 哔哩哔哩番剧页面的 <span class="token function">vmid</span><span class="token punctuation">(</span>uid<span class="token punctuation">)</span>
+  title<span class="token operator">:</span> <span class="token string">'追番列表'</span> # 该页面的标题
+  quote<span class="token operator">:</span> <span class="token string">'生命不息，追番不止！'</span> #写在页面开头的一段话，支持 html 语法，可留空
+  show<span class="token operator">:</span> <span class="token number">1</span> # 初始显示页面：<span class="token number">0</span><span class="token operator">:</span> 想看<span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">:</span> 在看<span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">:</span> 看过，默认为<span class="token number">1</span>
+  loading<span class="token operator">:</span> #  图片加载完成前的 loading 图片
+  metaColor<span class="token operator">:</span> #  meta <span class="token function">部分</span><span class="token punctuation">(</span>简介上方<span class="token punctuation">)</span>字体颜色
+  color<span class="token operator">:</span> # 简介字体颜色
+  webp<span class="token operator">:</span> # 番剧封面使用 webp <span class="token function">格式</span><span class="token punctuation">(</span>此格式在 safari 浏览器下不显示，但是图片大小可以缩小 <span class="token number">100</span> 倍左右<span class="token punctuation">)</span><span class="token punctuation">,</span> 默认 <span class="token boolean">true</span>
+  progress<span class="token operator">:</span> # 获取番剧数据时是否显示进度条，默认 <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3>使用</h3>
+
+<ol>
+<li><code>hexo new page "bangumis"</code>其 <code>bangumis</code>的 md 文档加上<code>type: "bangumis"</code></li>
+<li>添加 <code>uid</code></li>
+<li>在<code>hexo generate</code>或<code>hexo deploy</code>之前使用<code>hexo bangumi -u</code>命令更新番剧数据！</li>
+<li>删除数据命令:<code>hexo bangumi -d</code></li>
+</ol>
+<h3>获取 uid</h3>
+
+<p>登录哔哩哔哩后前往<code>https://space.bilibili.com</code>页面，网址最后的一串数字就是 <code>uid</code></p>
+<p><strong><em>需要将追番列表设置为公开！</em></strong></p>
+<h3>手动添加番剧数据</h3>
+
+<p>因为某些番剧在哔哩哔哩上没有，但是又想在 hexo 中展示，怎么办呢？现在支持手动添加番剧数据了！</p>
+<p>在 <code>sources/_data/</code> 目录下新建文件，命名为 <code>extra_bangumis.json</code> ，并添加以如下内容:</p>
+<pre class="line-numbers language-none"><code class="language-none">{
+  "watchedExtra": [
+    {
+      "title": "缘之空", 
+      "type": "番剧", 
+      "area": "日本", 
+      "cover": "https://cdn.jsdelivr.net/gh/mmdjiji/bangumis@main/Yosuga-no-Sora/cover.jpg", 
+      "totalCount": "全12话", 
+      "id": 0,
+      "follow": "不可用", 
+      "view": "不可用", 
+      "danmaku": "不可用", 
+      "coin": "不可用", 
+      "score": "不可用", 
+      "des": "远离都市的田园小镇，奥木染。春日野悠带着妹妹穹，来到了这座城镇。坐落在这里的是，儿时暑假经常造访的充满回忆的已故祖父的家。双亲因意外事故而丧生，变得无依无靠..."
+    }
+  ]
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>title</code> 是番剧的标题，<code>cover</code> 是封面图链接， <code>des</code> 是简介，上述字段均根据需要修改。</p>
+<p>另外除了 <code>watchedExtra</code> 数组，还可以在后面添加新的数组，可用数组名如下:</p>
+<table>
+<thead>
+<tr>
+<th>可用数组名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wantWatchExtra</td>
+<td>想看</td>
+</tr>
+<tr>
+<td>watchingExtra</td>
+<td>在看</td>
+</tr>
+<tr>
+<td>watchedExtra</td>
+<td>看过</td>
+</tr>
+</tbody>
+</table>
+<p>需要注意，在两个数组之间需要用 <code>,</code> 分隔。</p>
+<h2>进行个性化修改</h2>
 
 <blockquote>
-<p>这次带来的是由荧演奏的&lt;世末歌者&gt;<br>处于雷鸣闪电中的风龙废墟，站在当初哥哥空伫立的地方，弹着&lt;世末歌者&gt;<br>就感觉很应景啊是不是╮(╯▽╰)╭<br>感觉弹奏有点快了，不过根据时长来看也差不多？<br>之后的曲目还在思考中，有什么建议可以在评论区留言……</p>
+<p>参考<a target="_blank" rel="noopener" href="https://liuruibin.com/posts/64eb.html">Matrey 主题增加豆瓣书/影单</a></p>
 </blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=802465105&amp;bvid=BV18y4y1x7k9&amp;cid=318735072&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<h3> ejs 文件的创建</h3>
 
-<h2>2021/4/1</h2>
-
-<h3>砂糖-青花瓷</h3>
-
+<p>在<code>/themes/hexo-theme-matery/layout</code>文件夹下面创建一个名为 <code>bangumi.ejs</code> 的文件，并将下面的内容复制进去：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/post-cover'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span> 
+    <span class="token punctuation">.</span>hexo<span class="token operator">-</span>douban<span class="token operator">-</span>picture img <span class="token punctuation">{</span> 
+        width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>main <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"contact"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container chip-container"</span><span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"padding: 30px"</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span>h1 style<span class="token operator">=</span><span class="token string">"margin: 10px 0 10px 0px;"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">%=</span> page<span class="token punctuation">.</span>title <span class="token operator">%</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> page<span class="token punctuation">.</span>content <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span> style<span class="token operator">=</span><span class="token string">"text-align: center"</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span>h3 style<span class="token operator">=</span><span class="token string">"margin: 5px 0 5px 5px;"</span><span class="token operator">&gt;</span>如果你有好的内容推荐，欢迎在下面留言！<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitalk <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>gitalk<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitalk'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>gitment<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/gitment'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>disqus<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/disqus'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>livere <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>livere<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/livere'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>valine <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>valine<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/valine'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>minivaline <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>minivaline<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/minivaline'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span> 
+            <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span>     
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>这次带来的是由砂糖演奏的&lt;青花瓷&gt; 周总的经典曲目，<br>弹起来尽管有些磕磕碰碰，整体节奏感还是出来了， 跟之前的几首相比流畅很多，<br>下一首就是&lt;世末歌者&gt;了，这个我还得多练几遍，谱有点复杂┭┮﹏┭┮</p>
+<p>最后面的四个模块，可以根据实际运用模块进行直接删改</p>
 </blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=587435750&amp;bvid=BV1fB4y1P74N&amp;cid=318377680&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<h3>插件 moudle 内容修改</h3>
 
-<h2>2021/3/30</h2>
-
-<h3>行秋-烟雨行舟</h3> 
-
+<p>然后在博客站点目录下的 <code>node_modules</code> 文件夹下找到 <code>hexo-bilibili-bangumi/lib</code>，用文本编辑器打开文件夹。</p>
+<p>下面两个 js 文件中的代码进行对应修改：</p>
+<p><code>hexo-bilibili-bangumi\lib\bangumi-generator.js</code></p>
+<p><code>hexo-bilibili-bangumi\src\lib\bangumi-generator.js</code></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">layout<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'page'</span><span class="token punctuation">,</span> <span class="token string">'bangumi'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
-<p>这次带来的是行秋演奏的&lt;烟雨行舟&gt;，<br>这首歌好弹一点，不过还是感觉没把原曲的精髓演奏出来，<br>今天试弹了一下&lt;世末歌者&gt;，三段的歌词，原曲4min半，我弹了7min， 有空上传，<br>下一首还是挑首简单的好了，青花瓷就不错 感谢聆听orz</p>
+<p>本来的代码是 layout: [‘page’, ‘post’]</p>
 </blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=247287776&amp;bvid=BV13v41187ac&amp;cid=317276615&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2>2021/3/29</h2>
-
-<h3>迪奥娜-团子大家族</h3>
-
-<blockquote>
-<p>这次带来的是由迪奥娜演奏的&lt;团子大家族&gt;<br>作为Clannad的经典曲目，弹起来真的令人很有感觉！<br>之前上传的勾指起誓感觉弹得不是很好，过几天会重新弹一遍顺带上传。</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=629800784&amp;bvid=BV16b4y1Q7tc&amp;cid=317003218&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h3>甘雨-天空之城</h3>
-
-<blockquote>
-<p>这次带来的是甘雨演奏的&lt;天空之城&gt;<br>经典曲目啊，节奏很慢，也挺难把控的， 简谱看起来比其他的简单很多，上手才发现没一个简单的（手残党毕竟是）<br>下一首是我个人的安利曲目，敬请期待（话说真的有人期待吗？）</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=972262575&amp;bvid=BV1Vp4y1a7i4&amp;cid=316993638&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2>2021/3/28</h2>
-
-<h3>胡桃-勾指起誓</h3>
-
-<blockquote>
-<p>看着简谱打了一会，节奏有点难压，<br>本来打算第一首上传个小星星的，又觉得太简单了（笑）<br>后面有空看看再弹几首喜欢的</p>
-</blockquote>
-<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=374805596&amp;bvid=BV1VZ4y1A7ce&amp;cid=316314849&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
                 
             </div>
@@ -638,7 +727,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://BTMUli.github.io/posts/4510c7e2/">https://BTMUli.github.io/posts/4510c7e2/</a>
+                    <a href="https://BTMUli.github.io/posts/ff5e0d24/">https://BTMUli.github.io/posts/ff5e0d24/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -676,8 +765,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/">
-                                    <span class="chip bg-color">风物之琴</span>
+                                <a href="/tags/blog%E6%8F%92%E4%BB%B6/">
+                                    <span class="chip bg-color">blog插件</span>
+                                </a>
+                            
+                                <a href="/tags/Matery/">
+                                    <span class="chip bg-color">Matery</span>
                                 </a>
                             
                         </div>
@@ -893,9 +986,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/ff5e0d24/">
                     <div class="card-image">
@@ -912,9 +1006,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -927,6 +1021,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -949,30 +1044,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/d016527d/">
+                <a href="/posts/4510c7e2/">
                     <div class="card-image">
                         
-                        <img src="/medias/BOUQUET/1-2.png" class="responsive-img" alt="blog配置介绍">
+                        <img src="/medias/BOUQUET/2-2.png" class="responsive-img" alt="风物之琴">
                         
-                        <span class="card-title">blog配置介绍</span>
+                        <span class="card-title">风物之琴</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网页个性化相关
+                            原神-风物之琴相关
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                            <a href="/categories/Genshin-Impact/" class="post-category">
+                                    Genshin Impact
                                 </a>
                             
                             
@@ -982,12 +1077,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Matery/">
-                        <span class="chip bg-color">Matery</span>
-                    </a>
-                    
-                    <a href="/tags/blog-%E7%BC%96%E8%BE%91/">
-                        <span class="chip bg-color">blog 编辑</span>
+                    <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/">
+                        <span class="chip bg-color">风物之琴</span>
                     </a>
                     
                 </div>
