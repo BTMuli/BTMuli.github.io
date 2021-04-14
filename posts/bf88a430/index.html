@@ -138,6 +138,15 @@
       </li>
       
       <li>
+        <a href="/harp">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>风物之琴</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -260,6 +269,16 @@
 				   <i class="fa fas fa-heartbeat" style="position: absolute;left:50px" ></i>
 			      
 		          <span>404</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/harp " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>风物之琴</span>
                   </a>
                 </li>
               
@@ -478,7 +497,34 @@
 </style>
 <div class="row">
     <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+        <!-- 加入网易云音乐热门评论，实时更新 --> 
+<div class="poem-wrap"> 
+    <div class="poem-border poem-left"> 
+
+    </div> 
+    <div class="poem-border poem-right"> 
+
+    </div> 
+    <h1>热评</h1> 
+    <p id="poem">loading...</p> 
+    <p id="info">loading...</p> 
+</div>
+
+<script> 
+            $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(datastatus){ 
+                if(status=='success'){ 
+                    $('#poem').html(data.hitokoto) 
+                    if(data.from_who!=null){ 
+                        $('#info').html(data.from_who+" · "+《 "+data.from+"》"); 
+                    } 
+                    else{ 
+                        $('#info').html(" “ "+data.from+"” "); 
+                    } 
+                } 
+                else{$('#poem').html("获取出错啦");}}); 
+        </script>
+
+<!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -519,14 +565,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-14
+                    2021-04-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    654
+                    765
                 </div>
                 
 
@@ -684,6 +730,20 @@
 <li>添加 live2d 插件及说明文档</li>
 <li>代码块优化 <a target="_blank" rel="noopener" href="http://www.luckyzmj.cn/posts/1b9a9e28.html">参考文章</a></li>
 </ul>
+<h3>2021/4/14</h3>
+
+<ul>
+<li>腾讯云服务器购买、个人域名注册</li>
+<li>云服务器搭建尝试</li>
+<li>404 界面图片显示</li>
+<li>Bangumi 说明文档及 <code>bangumi.ejs</code>优化</li>
+<li>优化代码复制及<code>post-detail.ejs</code>代码</li>
+<li>优化<code>bg-cover-content.ejs</code>、<code>404.ejs</code>代码</li>
+<li>背景彩带显示（静态&amp;动态）</li>
+<li>首页视频显示及B站视频添加（改为不显示）</li>
+<li>“风物之琴”页面添加 <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/hexo-vlog-page.html">参考文章</a></li>
+<li>添加每日一言 </li>
+</ul>
 
                 
             </div>
@@ -755,7 +815,7 @@
                         </div>
                     
                 </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                <div class="post_share" style="zoom: 80%; width: fit-content;float: right; margin: -0.15rem 0;">
                     <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 <div id="article-share">
 
@@ -1087,10 +1147,13 @@
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
+        //if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        //    newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        //}
+        
+        //注释掉上面的if，将if中的内容释放出来
+        newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: BTMuli<br />'
@@ -1290,7 +1353,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.9k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
@@ -1527,7 +1590,13 @@ $(function () {
     
 
     
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

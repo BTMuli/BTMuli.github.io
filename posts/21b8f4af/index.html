@@ -138,6 +138,15 @@
       </li>
       
       <li>
+        <a href="/harp">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>风物之琴</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -260,6 +269,16 @@
 				   <i class="fa fas fa-heartbeat" style="position: absolute;left:50px" ></i>
 			      
 		          <span>404</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/harp " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>风物之琴</span>
                   </a>
                 </li>
               
@@ -478,7 +497,34 @@
 </style>
 <div class="row">
     <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+        <!-- 加入网易云音乐热门评论，实时更新 --> 
+<div class="poem-wrap"> 
+    <div class="poem-border poem-left"> 
+
+    </div> 
+    <div class="poem-border poem-right"> 
+
+    </div> 
+    <h1>热评</h1> 
+    <p id="poem">loading...</p> 
+    <p id="info">loading...</p> 
+</div>
+
+<script> 
+            $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(datastatus){ 
+                if(status=='success'){ 
+                    $('#poem').html(data.hitokoto) 
+                    if(data.from_who!=null){ 
+                        $('#info').html(data.from_who+" · "+《 "+data.from+"》"); 
+                    } 
+                    else{ 
+                        $('#info').html(" “ "+data.from+"” "); 
+                    } 
+                } 
+                else{$('#poem').html("获取出错啦");}}); 
+        </script>
+
+<!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -985,7 +1031,7 @@
                         </div>
                     
                 </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                <div class="post_share" style="zoom: 80%; width: fit-content;float: right; margin: -0.15rem 0;">
                     <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 <div id="article-share">
 
@@ -1320,10 +1366,13 @@
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
+        //if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        //    newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        //}
+        
+        //注释掉上面的if，将if中的内容释放出来
+        newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: BTMuli<br />'
@@ -1523,7 +1572,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.9k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
@@ -1760,7 +1809,13 @@ $(function () {
     
 
     
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

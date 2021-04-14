@@ -138,6 +138,15 @@
       </li>
       
       <li>
+        <a href="/harp">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>风物之琴</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -260,6 +269,16 @@
 				   <i class="fa fas fa-heartbeat" style="position: absolute;left:50px" ></i>
 			      
 		          <span>404</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/harp " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>风物之琴</span>
                   </a>
                 </li>
               
@@ -424,23 +443,25 @@
             <div class="title center-align">
                 
                      
-                        
+                
             </div>
 
             <div class="description center-align">
                 
-                        
-                            
+                    
+                
             </div>
         </div>
     </div>
 </div>
 
 
-        <script>
-            $('.bg-cover').css('background-image', 'url(/%20/%20medias%20/%20banner%20/%200.png)');
-        </script>
-        
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.png';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
+
 
             <div class="cover-btns">
                 <a href="#articles" class="waves-effect waves-light btn">
@@ -626,13 +647,12 @@
 
 <main class="content">
 
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
+<div id="indexCard" class="index-card">
+    <div class="container ">
+        <div class="card">
+            <div class="card-content">
+            
+                <div class="dream">
     
     <div class="title center-align">
         <i class="far fa-lightbulb"></i>&nbsp;&nbsp;MOTTO
@@ -645,15 +665,15 @@
     </div>
 </div>
 
-                    
+            
 
-                    
+            
 
-                    
+            
 
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
+            
+                <div id="recommend-sections" class="recommend">
+                
 
 
 
@@ -740,26 +760,26 @@
 </div>
 
 
-                    </div>
-                    
                 </div>
+            
             </div>
         </div>
     </div>
-    
+</div>
+
 
     
 
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
+        <!-- 所有文章卡片 -->
+        <article id="articles" class="container articles">
+            <div class="row article-row">
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/posts/ff5e0d24/">
                         <div class="card-image">
                             
-                                <img src="/medias/BOUQUET/3-1.png" class="responsive-img" alt="Bangumi 插件使用说明">
+                            <img src="/medias/BOUQUET/3-1.png" class="responsive-img" alt="Bangumi 插件使用说明">
                             
                             <span class="card-title">Bangumi 插件使用说明</span>
                         </div>
@@ -767,26 +787,26 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            
-                                为 Hexo 添加哔哩哔哩番剧页面
-                            
+                        
+                            为 Hexo 添加哔哩哔哩番剧页面
+                        
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
                             </span>
                             <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
                                 <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                                帮助文档
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                        
+                        </span>
                     </div>
+                </div>
 
                     
                     <div class="card-action article-tags">
@@ -799,17 +819,17 @@
                             <span class="chip bg-color">Matery</span>
                         </a>
                         
-                    </div>
+                        </div>
                     
+                    </div>
                 </div>
-            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/posts/21b8f4af/">
                         <div class="card-image">
                             
-                                <img src="/medias/BOUQUET/3-2.png" class="responsive-img" alt="live2d 插件说明">
+                            <img src="/medias/BOUQUET/3-2.png" class="responsive-img" alt="live2d 插件说明">
                             
                             <span class="card-title">live2d 插件说明</span>
                         </div>
@@ -817,26 +837,26 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            
-                                为 blog 添加 live2d 模型
-                            
+                        
+                            为 blog 添加 live2d 模型
+                        
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
                             </span>
                             <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
                                 <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                                帮助文档
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                        
+                        </span>
                     </div>
+                </div>
 
                     
                     <div class="card-action article-tags">
@@ -849,17 +869,17 @@
                             <span class="chip bg-color">live2d</span>
                         </a>
                         
-                    </div>
+                        </div>
                     
+                    </div>
                 </div>
-            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/posts/4510c7e2/">
                         <div class="card-image">
                             
-                                <img src="/medias/BOUQUET/2-2.png" class="responsive-img" alt="风物之琴">
+                            <img src="/medias/BOUQUET/2-2.png" class="responsive-img" alt="风物之琴">
                             
                             <span class="card-title">风物之琴</span>
                         </div>
@@ -867,26 +887,26 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            
-                                原神-风物之琴相关
-                            
+                        
+                            原神-风物之琴相关
+                        
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
                             </span>
                             <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
                                 <a href="/categories/Genshin-Impact/" class="post-category">
-                                    Genshin Impact
+                                Genshin Impact
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                        
+                        </span>
                     </div>
+                </div>
 
                     
                     <div class="card-action article-tags">
@@ -895,17 +915,17 @@
                             <span class="chip bg-color">风物之琴</span>
                         </a>
                         
-                    </div>
+                        </div>
                     
+                    </div>
                 </div>
-            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/posts/d016527d/">
                         <div class="card-image">
                             
-                                <img src="/medias/BOUQUET/1-2.png" class="responsive-img" alt="blog配置介绍">
+                            <img src="/medias/BOUQUET/1-2.png" class="responsive-img" alt="blog配置介绍">
                             
                             <span class="card-title">blog配置介绍</span>
                         </div>
@@ -913,26 +933,26 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            
-                                网页个性化相关
-                            
+                        
+                            网页个性化相关
+                        
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
                             </span>
                             <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
                                 <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                                帮助文档
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                        
+                        </span>
                     </div>
+                </div>
 
                     
                     <div class="card-action article-tags">
@@ -945,17 +965,17 @@
                             <span class="chip bg-color">blog 编辑</span>
                         </a>
                         
-                    </div>
+                        </div>
                     
+                    </div>
                 </div>
-            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/posts/22e76f60/">
                         <div class="card-image">
                             
-                                <img src="/medias/BOUQUET/2-1.png" class="responsive-img" alt="文章配置介绍">
+                            <img src="/medias/BOUQUET/2-1.png" class="responsive-img" alt="文章配置介绍">
                             
                             <span class="card-title">文章配置介绍</span>
                         </div>
@@ -963,26 +983,26 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            
-                                blog 编辑
-                            
+                        
+                            blog 编辑
+                        
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
                             </span>
                             <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
                                 <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                                帮助文档
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                        
+                        </span>
                     </div>
+                </div>
 
                     
                     <div class="card-action article-tags">
@@ -991,17 +1011,17 @@
                             <span class="chip bg-color">文档编辑</span>
                         </a>
                         
-                    </div>
+                        </div>
                     
+                    </div>
                 </div>
-            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/posts/bf88a430/">
                         <div class="card-image">
                             
-                                <img src="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
+                            <img src="/medias/BOUQUET/1-1.png" class="responsive-img" alt="Timeline">
                             
                             <span class="card-title">Timeline</span>
                         </div>
@@ -1009,26 +1029,26 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            
-                                这个网站的时间表
-                            
+                        
+                            这个网站的时间表
+                        
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
                             </span>
                             <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
                                 <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
-                                    帮助文档
+                                帮助文档
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                        
+                        </span>
                     </div>
+                </div>
 
                     
                     <div class="card-action article-tags">
@@ -1037,10 +1057,10 @@
                             <span class="chip bg-color">时间表</span>
                         </a>
                         
-                    </div>
+                        </div>
                     
+                    </div>
                 </div>
-            </div>
             
         </div>
     </article>
@@ -1109,7 +1129,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.9k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
@@ -1346,7 +1366,13 @@ $(function () {
     
 
     
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

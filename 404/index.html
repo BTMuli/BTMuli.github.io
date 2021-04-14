@@ -138,6 +138,15 @@
       </li>
       
       <li>
+        <a href="/harp">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>风物之琴</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -265,6 +274,16 @@
               
                 <li>
 
+                  <a href="/harp " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>风物之琴</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/bangumis " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
@@ -374,7 +393,7 @@
             <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
                 <div class="brand">
                     <div class="title center-align">
-                        404
+                        You're out of the way!
                     </div>
                     <div class="description center-align">
                         
@@ -387,11 +406,16 @@
 <!--
     
         <script>
-            $('.bg-cover').css('background-image', 'url(/medias/banner/0.png)');
+            // 每天切换 banner 图.  Switch banner image every day.
+            var bannerUrl = "/medias/banner/" + new Date().getDay() + '.png';
+            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
         </script>
     
 -->
-
+<script>
+    var bannerUrl = "/medias/404.png";
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
     <footer class="page-footer bg-color">
     
@@ -453,7 +477,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.9k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
@@ -690,7 +714,13 @@ $(function () {
     
 
     
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
