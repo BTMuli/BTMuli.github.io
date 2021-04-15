@@ -138,15 +138,6 @@
       </li>
       
       <li>
-        <a href="/harp">
-          
-          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>风物之琴</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -269,16 +260,6 @@
 				   <i class="fa fas fa-heartbeat" style="position: absolute;left:50px" ></i>
 			      
 		          <span>404</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/harp " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
-			      
-		          <span>风物之琴</span>
                   </a>
                 </li>
               
@@ -497,34 +478,7 @@
 </style>
 <div class="row">
     <div id="main-content" class="col s12 m12 l9">
-        <!-- 加入网易云音乐热门评论，实时更新 --> 
-<div class="poem-wrap"> 
-    <div class="poem-border poem-left"> 
-
-    </div> 
-    <div class="poem-border poem-right"> 
-
-    </div> 
-    <h1>热评</h1> 
-    <p id="poem">loading...</p> 
-    <p id="info">loading...</p> 
-</div>
-
-<script> 
-            $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(datastatus){ 
-                if(status=='success'){ 
-                    $('#poem').html(data.hitokoto) 
-                    if(data.from_who!=null){ 
-                        $('#info').html(data.from_who+" · "+《 "+data.from+"》"); 
-                    } 
-                    else{ 
-                        $('#info').html(" “ "+data.from+"” "); 
-                    } 
-                } 
-                else{$('#poem').html("获取出错啦");}}); 
-        </script>
-
-<!-- 文章内容详情 -->
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -572,7 +526,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    765
+                    783
                 </div>
                 
 
@@ -743,6 +697,12 @@
 <li>首页视频显示及B站视频添加（改为不显示）</li>
 <li>“风物之琴”页面添加 <a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/hexo-vlog-page.html">参考文章</a></li>
 <li>添加每日一言 </li>
+</ul>
+<h3>2021/4/15</h3>
+
+<ul>
+<li>风物之琴页面不显示</li>
+<li>每日一言 优化</li>
 </ul>
 
                 
@@ -1353,7 +1313,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5k</span>&nbsp;字
+                class="white-color">5.1k</span>&nbsp;字
             
             
             

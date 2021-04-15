@@ -138,15 +138,6 @@
       </li>
       
       <li>
-        <a href="/harp">
-          
-          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>风物之琴</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -269,16 +260,6 @@
 				   <i class="fa fas fa-heartbeat" style="position: absolute;left:50px" ></i>
 			      
 		          <span>404</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/harp " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
-			      
-		          <span>风物之琴</span>
                   </a>
                 </li>
               
@@ -666,7 +647,22 @@
 </div>
 
             
+            
+            <!-- 加入一言板块，实时更新 --> 
+            <div class="poem-wrap"> 
+                <div class="poem-border poem-left"> 
 
+                </div> 
+                <div class="poem-border poem-right"> 
+
+                </div> 
+                <h1>一言</h1> 
+                <p id="poem">loading...</p> 
+                <p id="info">loading...</p> 
+            </div>
+            <!--其他版本的一言引入-->
+            <p id="hitokoto"></p>
+            
             
 
             
@@ -1068,6 +1064,34 @@
 </main>
 
 
+<script> 
+    $.get('https://v1.hitokoto.cn?c=a&c=c&c=d',function(datastatus){ 
+        if(status =='success'){ 
+            $('#poem').html(data.hitokoto) 
+            if(data.from_who!=null){ 
+                $('#info').html(data.from_who+" · "+"《"+data.from+"》"); 
+            } 
+            else{ 
+                $('#info').html(" “ "+data.from+"” "); 
+            } 
+        } 
+        else{$('#poem').html("获取出错啦");}}); 
+</script>
+<!--
+<script>
+     fetch('https://v1.hitokoto.cn?c=a&c=c&c=d')
+       .then(function (res){
+         return res.json();
+       })
+       .then(function (data) {
+         var hitokoto = document.getElementById('hitokoto');
+         hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
+       })
+       .catch(function (err) {
+         console.error(err);
+       })
+</script>
+-->
 
     <footer class="page-footer bg-color">
     
@@ -1129,7 +1153,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5k</span>&nbsp;字
+                class="white-color">5.1k</span>&nbsp;字
             
             
             
