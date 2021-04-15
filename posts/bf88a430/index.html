@@ -545,7 +545,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    807
+                    819
                 </div>
                 
 
@@ -724,6 +724,7 @@
 <li>增加相册页面 <a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/3b98.html"><code>参考文章</code></a></li>
 <li>harp 页面优化</li>
 <li>harp 页面删除，放弃编辑</li>
+<li>增加深色模式（粗略）<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/blog-poem-comment.html#vcomments">参考文章</a></li>
 </ul>
 
                 
@@ -1588,3 +1589,17 @@ $(function () {
     <script type="text/javascript"
         color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
+
+    <!--黑暗模式-->
+    <script> 
+        if (localStorage.getItem('dark') === '1') { 
+            document.body.classList.add('dark'); 
+        } 
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { 
+            document.body.classList.add('dark'); 
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
+            document.body.classList.add('dark'); 
+        } 
+    </script> 
+    <a onclick="switchNightMode()" id="sma"> <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> </a>
