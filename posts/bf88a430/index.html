@@ -545,14 +545,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    819
+                    860
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -724,7 +724,10 @@
 <li>增加相册页面 <a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/3b98.html"><code>参考文章</code></a></li>
 <li>harp 页面优化</li>
 <li>harp 页面删除，放弃编辑</li>
-<li>增加深色模式（粗略）<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/blog-poem-comment.html#vcomments">参考文章</a></li>
+<li>增加深色模式（粗略）<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/blog-night-mode.html">关于给hexo博客适配全局深色模式 | itsNekoDeng (gitee.io)</a></li>
+<li>修改 <a href="https://btmuli.github.io/posts/ff5e0d24/">Bangumi 插件使用说明 | BTMuli</a></li>
+<li>深色模式相关配置清除（某些显示出错了草）</li>
+<li></li>
 </ul>
 
                 
@@ -986,13 +989,13 @@
         tagMeta: ["博主", "小伙伴", "访客"],
         master: ["18350c40e51749be69ee78b20def2979"],
         friends: [""],
-        math: true,
-        md: true,
-        enableQQ: true,
-        NoRecordIP: false,
-        visitor: true,
-        maxNest: 6,
-        pageSize: 6,
+        math: 'true',
+        md: 'true',
+        enableQQ: 'true',
+        NoRecordIP: 'false',
+        visitor: 'true',
+        maxNest: '6',
+        pageSize: '6',
         serverURLs: '',
         emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
     });
@@ -1322,7 +1325,7 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
+    <div class="container row center-align" style="margin-bottom: '15px !important';">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1589,17 +1592,6 @@ $(function () {
     <script type="text/javascript"
         color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
+</body>
 
-    <!--黑暗模式-->
-    <script> 
-        if (localStorage.getItem('dark') === '1') { 
-            document.body.classList.add('dark'); 
-        } 
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { 
-            document.body.classList.add('dark'); 
-        } 
-        else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
-            document.body.classList.add('dark'); 
-        } 
-    </script> 
-    <a onclick="switchNightMode()" id="sma"> <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> </a>
+</html>

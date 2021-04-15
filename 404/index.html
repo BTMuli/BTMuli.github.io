@@ -405,18 +405,6 @@
                             <p id="poem">loading...</p>
                             <p id="info">loading...</p>
                         </div>
-
-                        <p id="hitokoto"></p>
-
-                        <div class="row">
-                            <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-                              <span id="hitokoto">愿愚薄望，如樱盛开，花吹雪散，佳人自来。</span>
-                               <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="description center-align">
-                        
                     </div>
                 </div>
             </div>
@@ -438,27 +426,19 @@
             return res.json();
         })
         .then(function (data) {
-            var hitokoto = document.getElementById('hitokoto');
-            hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
+            var poem = document.getElementById('poem');
+            var info = document.getElementById('info');
+            poem.innerText = data.hitokoto;
+            if(data.from_who!=null)
+                info.innerText = data.from_who+" · "+"《"+data.from+"》";
+            else
+                info.innerText = " “ "+data.from+"” ";
         })
         .catch(function (err) {
             console.error(err);
         })
 </script>
 
-<script> 
-    $.get('https://v1.hitokoto.cn?c=a&c=c&c=d',function(datastatus){ 
-        if(status =='success'){ 
-            $('#poem').html(data.hitokoto) 
-            if(data.from_who!=null){ 
-                $('#info').html(data.from_who+" · "+"《"+data.from+"》"); 
-            } 
-            else{ 
-                $('#info').html(" “ "+data.from+"” "); 
-            } 
-        } 
-        else{$('#poem').html("获取出错啦");}}); 
-</script>
 
 
     <footer class="page-footer bg-color">
@@ -508,7 +488,7 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
+    <div class="container row center-align" style="margin-bottom: '15px !important';">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -775,17 +755,6 @@ $(function () {
     <script type="text/javascript"
         color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
+</body>
 
-    <!--黑暗模式-->
-    <script> 
-        if (localStorage.getItem('dark') === '1') { 
-            document.body.classList.add('dark'); 
-        } 
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { 
-            document.body.classList.add('dark'); 
-        } 
-        else if (matchMedia('(prefers-color-scheme: dark)').matches) { 
-            document.body.classList.add('dark'); 
-        } 
-    </script> 
-    <a onclick="switchNightMode()" id="sma"> <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> </a>
+</html>
