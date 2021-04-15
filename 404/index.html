@@ -138,6 +138,15 @@
       </li>
       
       <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/bangumis">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -265,6 +274,16 @@
               
                 <li>
 
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/bangumis " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
@@ -374,7 +393,27 @@
             <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
                 <div class="brand">
                     <div class="title center-align">
-                        You're out of the way!
+                        <!-- 加入一言板块，实时更新 -->
+                        <div class="poem-wrap">
+                            <div class="poem-border poem-left">
+
+                            </div>
+                            <div class="poem-border poem-right">
+
+                            </div>
+                            <h1>一言</h1>
+                            <p id="poem">loading...</p>
+                            <p id="info">loading...</p>
+                        </div>
+
+                        <p id="hitokoto"></p>
+
+                        <div class="row">
+                            <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+                              <span id="hitokoto">愿愚薄望，如樱盛开，花吹雪散，佳人自来。</span>
+                               <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+                            </div>
+                        </div>
                     </div>
                     <div class="description center-align">
                         
@@ -384,19 +423,43 @@
         </div>
     </div>
 </div>
-<!--
-    
-        <script>
-            // 每天切换 banner 图.  Switch banner image every day.
-            var bannerUrl = "https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/banner/" + new Date().getDay() + '.png';
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-        </script>
-    
--->
+
+
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/banner/" + new Date().getDay() + '.png';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
+
+
 <script>
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/BTMuli/BTMuli.github.io/medias/404.png";
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    fetch('https://v1.hitokoto.cn?c=a&c=c&c=d')
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            var hitokoto = document.getElementById('hitokoto');
+            hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
+        })
+        .catch(function (err) {
+            console.error(err);
+        })
 </script>
+
+<script> 
+    $.get('https://v1.hitokoto.cn?c=a&c=c&c=d',function(datastatus){ 
+        if(status =='success'){ 
+            $('#poem').html(data.hitokoto) 
+            if(data.from_who!=null){ 
+                $('#info').html(data.from_who+" · "+"《"+data.from+"》"); 
+            } 
+            else{ 
+                $('#info').html(" “ "+data.from+"” "); 
+            } 
+        } 
+        else{$('#poem').html("获取出错啦");}}); 
+</script>
+
 
     <footer class="page-footer bg-color">
     
