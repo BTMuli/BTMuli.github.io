@@ -410,7 +410,21 @@
         <div class="brand">
             <div class="title center-align">
                 
+                    <!--
                     
+                    -->
+                    <!-- 加入一言板块，实时更新 -->
+                <div class="poem-wrap">
+                <div class="poem-border poem-left">
+
+                </div>
+                <div class="poem-border poem-right">
+
+                </div>
+                <h1>一言</h1>
+                <p id="poem">loading...</p>
+                <p id="info">loading...</p>
+                </div>
                 
             </div>
 
@@ -430,6 +444,27 @@
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
 
+
+<!--一言板块插入-->
+<script>
+    fetch('https://v1.hitokoto.cn?c=a&c=c&c=d')
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            var poem = document.getElementById('poem');
+            var info = document.getElementById('info');
+            poem.innerText = data.hitokoto;
+            if(data.from_who!=null)
+                info.innerText = data.from_who+" · "+"《"+data.from+"》";
+            else
+                info.innerText = " “ "+data.from+"” ";
+        })
+        .catch(function (err) {
+            console.error(err);
+        })
+</script>
+
     </div>
 </div>
 
@@ -446,20 +481,20 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/blog%E6%8F%92%E4%BB%B6/" title="blog插件: 1">
+                <a href="/tags/blog%E6%8F%92%E4%BB%B6/" title="blog插件: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             data-tagname="blog插件" style="background-color: #F9EBEA;">blog插件
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Matery/" title="Matery: 2">
+                <a href="/tags/Matery-Hexo-Bilibili-Bangumi/" title="Matery - Hexo-Bilibili-Bangumi: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Matery" style="background-color: #F5EEF8;">Matery
-                        <span class="tag-length">2</span>
+                            data-tagname="Matery - Hexo-Bilibili-Bangumi" style="background-color: #F5EEF8;">Matery - Hexo-Bilibili-Bangumi
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -482,11 +517,11 @@
                 </a>
                 
                 
-                <a href="/tags/blog-%E6%8F%92%E4%BB%B6/" title="blog 插件: 1">
+                <a href="/tags/Matery/" title="Matery: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="blog 插件" style="background-color: #FEF9E7;">blog 插件
-                        <span class="tag-length">1</span>
+                            data-tagname="Matery" style="background-color: #FEF9E7;">Matery
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -500,10 +535,19 @@
                 </a>
                 
                 
+                <a href="/tags/%E4%B8%80%E8%A8%80/" title="一言: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="一言" style="background-color: #82E0AA;">一言
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/" title="文档编辑: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="文档编辑" style="background-color: #82E0AA;">文档编辑
+                            data-tagname="文档编辑" style="background-color: #D7BDE2;">文档编辑
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -512,7 +556,7 @@
                 <a href="/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/" title="风物之琴: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="风物之琴" style="background-color: #D7BDE2;">风物之琴
+                            data-tagname="风物之琴" style="background-color: #A3E4D7;">风物之琴
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -528,7 +572,38 @@
         <div class="row tags-posts">
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="blog插件, Matery" data-aos="fade-up">
+            <div class="article tag-post col s12 m6 l4" data-tags="blog插件, Matery, 一言" data-aos="fade-up">
+                <div class="card">
+                    <a href="/posts/dd015715/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/BOUQUET/4-1.png" class="responsive-img" alt="一言 配置说明">
+                            
+                            <span class="card-title">一言 配置说明</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
+                                帮助文档
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="blog插件, Matery - Hexo-Bilibili-Bangumi" data-aos="fade-up">
                 <div class="card">
                     <a href="/posts/ff5e0d24/">
                         <div class="card-image tag-image">
@@ -536,6 +611,37 @@
                             <img src="/medias/BOUQUET/3-1.png" class="responsive-img" alt="Bangumi 插件使用说明">
                             
                             <span class="card-title">Bangumi 插件使用说明</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/" class="post-category">
+                                帮助文档
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="blog插件, Matery, live2d" data-aos="fade-up">
+                <div class="card">
+                    <a href="/posts/21b8f4af/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/BOUQUET/3-2.png" class="responsive-img" alt="live2d 插件说明">
+                            
+                            <span class="card-title">live2d 插件说明</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
@@ -624,7 +730,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.2k</span>&nbsp;字
+                class="white-color">5.9k</span>&nbsp;字
             
             
             

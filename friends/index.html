@@ -410,7 +410,21 @@
         <div class="brand">
             <div class="title center-align">
                 
+                    <!--
                     friends
+                    -->
+                    <!-- 加入一言板块，实时更新 -->
+                <div class="poem-wrap">
+                <div class="poem-border poem-left">
+
+                </div>
+                <div class="poem-border poem-right">
+
+                </div>
+                <h1>一言</h1>
+                <p id="poem">loading...</p>
+                <p id="info">loading...</p>
+                </div>
                 
             </div>
 
@@ -429,6 +443,27 @@
         var bannerUrl = "/medias/banner/" + new Date().getDay() + '.png';
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
+
+
+<!--一言板块插入-->
+<script>
+    fetch('https://v1.hitokoto.cn?c=a&c=c&c=d')
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            var poem = document.getElementById('poem');
+            var info = document.getElementById('info');
+            poem.innerText = data.hitokoto;
+            if(data.from_who!=null)
+                info.innerText = data.from_who+" · "+"《"+data.from+"》";
+            else
+                info.innerText = " “ "+data.from+"” ";
+        })
+        .catch(function (err) {
+            console.error(err);
+        })
+</script>
 
     </div>
 </div>
@@ -747,7 +782,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.2k</span>&nbsp;字
+                class="white-color">5.9k</span>&nbsp;字
             
             
             
