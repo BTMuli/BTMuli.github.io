@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>棃星落月</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://BTMUli.github.io/"/>
+  <updated>2021-05-27T12:22:56.780Z</updated>
+  <id>https://BTMUli.github.io/</id>
+  
+  <author>
+    <name>目棃</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实验场</title>
+    <link href="https://BTMUli.github.io/posts/63a261e4/"/>
+    <id>https://BTMUli.github.io/posts/63a261e4/</id>
+    <published>2021-05-27T11:10:09.000Z</published>
+    <updated>2021-05-27T12:22:56.780Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;这里放的是我对于网站加的一些东西，（感觉也没什么好讲的）。&lt;/p&gt;
+&lt;h3&gt;&lt;span id=&quot;黑幕效果&quot;&gt;黑幕效果&lt;/span&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;具体参见&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Tasks" scheme="https://BTMUli.github.io/categories/Tasks/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="文档编辑" scheme="https://BTMUli.github.io/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Todolist</title>
+    <link href="https://BTMUli.github.io/posts/243b948d/"/>
+    <id>https://BTMUli.github.io/posts/243b948d/</id>
+    <published>2021-05-27T11:01:11.000Z</published>
+    <updated>2021-05-27T12:22:42.890Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 align=&quot;center&quot;&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;主要是总结一下未来要搞得一些优化&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;因为 Hexo 渲染不出 md
+        
+      
+    
+    </summary>
+    
+      <category term="Tasks" scheme="https://BTMUli.github.io/categories/Tasks/"/>
+    
+    
+      <category term="blog优化" scheme="https://BTMUli.github.io/tags/blog%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="文档编辑" scheme="https://BTMUli.github.io/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matery手机端TOC适配</title>
+    <link href="https://BTMUli.github.io/posts/9749dd3a/"/>
+    <id>https://BTMUli.github.io/posts/9749dd3a/</id>
+    <published>2021-05-14T12:22:05.000Z</published>
+    <updated>2021-05-21T01:17:37.047Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;参考文档1：&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="说明文档" scheme="https://BTMUli.github.io/categories/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog优化" scheme="https://BTMUli.github.io/tags/blog%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-admonition使用说明</title>
+    <link href="https://BTMUli.github.io/posts/ec1cf20c/"/>
+    <id>https://BTMUli.github.io/posts/ec1cf20c/</id>
+    <published>2021-05-12T15:22:23.000Z</published>
+    <updated>2021-05-12T16:16:34.115Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;参考文档：&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://github.com/lxl80/hexo-admonition&quot;&gt;lxl80/hexo-admonition: Add
+        
+      
+    
+    </summary>
+    
+      <category term="说明文档" scheme="https://BTMUli.github.io/categories/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="blog优化" scheme="https://BTMUli.github.io/tags/blog%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用站点备份</title>
+    <link href="https://BTMUli.github.io/posts/d5fa2eef/"/>
+    <id>https://BTMUli.github.io/posts/d5fa2eef/</id>
+    <published>2021-05-12T15:11:26.000Z</published>
+    <updated>2021-05-21T14:21:41.025Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 align=&quot;center&quot;&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h3&gt;
+
+&lt;h6 align=&quot;center&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Tools" scheme="https://BTMUli.github.io/categories/Tools/"/>
+    
+    
+      <category term="工具站" scheme="https://BTMUli.github.io/tags/%E5%B7%A5%E5%85%B7%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog优化</title>
+    <link href="https://BTMUli.github.io/posts/ca708840/"/>
+    <id>https://BTMUli.github.io/posts/ca708840/</id>
+    <published>2021-04-22T08:44:56.000Z</published>
+    <updated>2021-05-27T11:05:31.305Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 align=&quot;center&quot;&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h3&gt;
+
+&lt;h5 align=&quot;center&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog优化" scheme="https://BTMUli.github.io/tags/blog%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深色模式配置说明文档</title>
+    <link href="https://BTMUli.github.io/posts/2cc7b07/"/>
+    <id>https://BTMUli.github.io/posts/2cc7b07/</id>
+    <published>2021-04-21T13:23:34.000Z</published>
+    <updated>2021-04-25T05:59:32.175Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;参考文档1：&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://hesifan.top/2021/042039526.html&quot;&gt;hexo-matery添加深色模式 | FanHeart
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+      <category term="深色模式" scheme="https://BTMUli.github.io/tags/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文字覆盖黑幕说明文档</title>
+    <link href="https://BTMUli.github.io/posts/c150a6dc/"/>
+    <id>https://BTMUli.github.io/posts/c150a6dc/</id>
+    <published>2021-04-20T16:22:40.000Z</published>
+    <updated>2021-04-22T05:46:45.260Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;code class=&quot;heimu&quot; title=&quot;你知道的太多了&quot;&gt;跟你看到的一样，你知道的太多了&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考文档：&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="文档编辑" scheme="https://BTMUli.github.io/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在blog编辑时遇到的一些问题及其解决</title>
+    <link href="https://BTMUli.github.io/posts/4120b44/"/>
+    <id>https://BTMUli.github.io/posts/4120b44/</id>
+    <published>2021-04-20T16:04:44.000Z</published>
+    <updated>2021-04-26T09:52:54.068Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3&gt;&lt;span id=&quot;配置音乐模块出现-css-未定义的问题&quot;&gt;配置音乐模块出现 css 未定义的问题&lt;/span&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;2021/4/22 更新&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个问题是在采用&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog 编辑" scheme="https://BTMUli.github.io/tags/blog-%E7%BC%96%E8%BE%91/"/>
+    
+      <category term="bug 解决" scheme="https://BTMUli.github.io/tags/bug-%E8%A7%A3%E5%86%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一言 配置说明</title>
+    <link href="https://BTMUli.github.io/posts/dd015715/"/>
+    <id>https://BTMUli.github.io/posts/dd015715/</id>
+    <published>2021-04-16T11:36:12.000Z</published>
+    <updated>2021-05-10T14:15:05.022Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;参考文档1：&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+      <category term="一言" scheme="https://BTMUli.github.io/tags/%E4%B8%80%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 部署到腾讯云</title>
+    <link href="https://BTMUli.github.io/posts/a727150d/"/>
+    <id>https://BTMUli.github.io/posts/a727150d/</id>
+    <published>2021-04-14T08:14:24.000Z</published>
+    <updated>2021-04-21T17:17:08.705Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2&gt;&lt;span id=&quot;一-部署环境与准备&quot;&gt;一、部署环境与准备&lt;/span&gt;&lt;/h2&gt;
+
+&lt;h3&gt;&lt;span id=&quot;1环境&quot;&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="hexo" scheme="https://BTMUli.github.io/tags/hexo/"/>
+    
+      <category term="腾讯云" scheme="https://BTMUli.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bangumi 插件使用说明</title>
+    <link href="https://BTMUli.github.io/posts/ff5e0d24/"/>
+    <id>https://BTMUli.github.io/posts/ff5e0d24/</id>
+    <published>2021-04-05T09:14:10.000Z</published>
+    <updated>2021-04-21T13:27:42.566Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;bangumi-插件使用说明&quot;&gt;Bangumi 插件使用说明&lt;/span&gt;&lt;/h1&gt;
+
+&lt;h2&gt;&lt;span id=&quot;根据官方文档安装插件&quot;&gt;根据官方文档安装插件&lt;/span&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;参考&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+      <category term="Hexo-Bilibili-Bangumi" scheme="https://BTMUli.github.io/tags/Hexo-Bilibili-Bangumi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>live2d 插件说明</title>
+    <link href="https://BTMUli.github.io/posts/21b8f4af/"/>
+    <id>https://BTMUli.github.io/posts/21b8f4af/</id>
+    <published>2021-04-05T08:32:49.000Z</published>
+    <updated>2021-04-22T09:37:13.192Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;live2d-插件说明&quot;&gt;live2d 插件说明&lt;/span&gt;&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;参考文章&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="blog插件" scheme="https://BTMUli.github.io/tags/blog%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+      <category term="live2d" scheme="https://BTMUli.github.io/tags/live2d/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>风物之琴</title>
+    <link href="https://BTMUli.github.io/posts/4510c7e2/"/>
+    <id>https://BTMUli.github.io/posts/4510c7e2/</id>
+    <published>2021-04-05T08:32:49.000Z</published>
+    <updated>2021-05-12T15:02:56.927Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;风物之琴-自由演奏&quot;&gt;风物之琴-自由演奏&lt;/span&gt;&lt;/h1&gt;
+
+&lt;h2&gt;&lt;span id=&quot;202151&quot;&gt;2021/5/1&lt;/span&gt;&lt;/h2&gt;
+
+&lt;h3&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="原神" scheme="https://BTMUli.github.io/categories/%E5%8E%9F%E7%A5%9E/"/>
+    
+    
+      <category term="风物之琴" scheme="https://BTMUli.github.io/tags/%E9%A3%8E%E7%89%A9%E4%B9%8B%E7%90%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog配置介绍</title>
+    <link href="https://BTMUli.github.io/posts/d016527d/"/>
+    <id>https://BTMUli.github.io/posts/d016527d/</id>
+    <published>2021-04-04T08:36:31.000Z</published>
+    <updated>2021-04-13T14:33:08.633Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;本文章全文转自&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://zhuanlan.zhihu.com/p/26625249&quot;&gt;GitHub+Hexo
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+      <category term="blog 编辑" scheme="https://BTMUli.github.io/tags/blog-%E7%BC%96%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章配置介绍</title>
+    <link href="https://BTMUli.github.io/posts/22e76f60/"/>
+    <id>https://BTMUli.github.io/posts/22e76f60/</id>
+    <published>2021-04-04T07:50:27.000Z</published>
+    <updated>2021-04-16T13:21:51.536Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;本文章全文转自&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="Matery" scheme="https://BTMUli.github.io/tags/Matery/"/>
+    
+      <category term="文档编辑" scheme="https://BTMUli.github.io/tags/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Timeline</title>
+    <link href="https://BTMUli.github.io/posts/bf88a430/"/>
+    <id>https://BTMUli.github.io/posts/bf88a430/</id>
+    <published>2021-03-27T10:37:08.000Z</published>
+    <updated>2021-05-27T11:57:38.066Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3&gt;&lt;span id=&quot;20213&quot;&gt;2021/3&lt;/span&gt;&lt;/h3&gt;
+
+&lt;h4&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="帮助文档" scheme="https://BTMUli.github.io/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="时间表" scheme="https://BTMUli.github.io/tags/%E6%97%B6%E9%97%B4%E8%A1%A8/"/>
+    
+  </entry>
+  
+</feed>
